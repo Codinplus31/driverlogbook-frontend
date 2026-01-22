@@ -27,8 +27,8 @@ npm -v
 If you haven’t already cloned the project:
 
 ```bash
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/Codinplus31/driverlogbook-frontend.git
+cd driverlogbook-frontend
 ```
 
 ---
