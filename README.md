@@ -1,6 +1,6 @@
 # React + Vite Project Setup Guide
 
-This guide walks you through setting up a modern React project using **Vite**. Vite is a fast build tool that provides an excellent developer experience with instant server start and hot module replacement (HMR).
+This guide explains how to install dependencies and run an existing **React + Vite** project locally.
 
 ---
 
@@ -22,37 +22,20 @@ npm -v
 
 ---
 
-## Step 1: Create a New Vite + React Project
+## Step 1: Clone the Repository
 
-Run the following command in your terminal:
-
-```bash
-npm create vite@latest
-```
-
-You will be prompted with a few questions:
-
-* **Project name:** your-project-name
-* **Select a framework:** React
-* **Select a variant:** JavaScript or TypeScript (choose based on your preference)
-
-Example:
+If you haven’t already cloned the project:
 
 ```bash
-npm create vite@latest my-react-app
+git clone https://github.com/Codinplus31/driverlogbook-frontend.git
+cd driverlogbook-frontend
 ```
 
 ---
 
-## Step 2: Navigate into the Project Folder
+## Step 2: Install Dependencies
 
-```bash
-cd my-react-app
-```
-
----
-
-## Step 3: Install Dependencies
+Run the following command inside the project folder:
 
 ```bash
 npm install
@@ -61,110 +44,70 @@ npm install
 Or if you use yarn:
 
 ```bash
-yarn
+yarn install
 ```
+
+Or if you use pnpm:
+
+```bash
+pnpm install
+```
+
+This will install all required packages listed in `package.json`.
 
 ---
 
-## Step 4: Start the Development Server
+## Step 3: Start the Development Server
 
 ```bash
 npm run dev
 ```
 
-This will start the Vite dev server. Open your browser and go to:
+Or with yarn:
+
+```bash
+yarn dev
+```
+
+Or with pnpm:
+
+```bash
+pnpm dev
+```
+
+The app will start locally. Open your browser and go to:
 
 ```
 http://localhost:5173
 ```
 
-You should see the default Vite + React welcome page.
+> If port 5173 is already in use, Vite will automatically use another available port and display it in the terminal.
 
 ---
 
-## Project Structure Overview
+## Step 4: Build for Production (Optional)
 
-After setup, your project will look like this:
-
-```
-my-react-app/
-├─ public/
-│  └─ vite.svg
-├─ src/
-│  ├─ assets/
-│  ├─ App.jsx
-│  ├─ main.jsx
-│  └─ index.css
-├─ index.html
-├─ package.json
-├─ vite.config.js
-└─ README.md
-```
-
-Key files:
-
-* **main.jsx** – Entry point of the app
-* **App.jsx** – Main React component
-* **index.html** – Root HTML file
-* **vite.config.js** – Vite configuration
-
----
-
-## Adding Tailwind CSS (Optional)
-
-If you want to use Tailwind CSS:
-
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-Update `tailwind.config.js`:
-
-```js
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-Add to `src/index.css`:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
----
-
-## Building for Production
-
-To create a production build:
+To create an optimized production build:
 
 ```bash
 npm run build
 ```
 
-The output will be in the `dist/` folder.
+The output will be generated in the `dist/` folder.
 
 ---
 
-## Preview Production Build Locally
+## Step 5: Preview the Production Build (Optional)
 
 ```bash
 npm run preview
 ```
 
+This starts a local server to preview the production build.
+
 ---
 
-## Useful Scripts
+## Common Scripts
 
 ```bash
 npm run dev      # Start development server
@@ -176,21 +119,18 @@ npm run preview  # Preview production build
 
 ## Troubleshooting
 
-* If `npm create vite@latest` fails, update npm:
+* If `npm install` fails, try deleting `node_modules` and `package-lock.json`, then reinstall:
 
 ```bash
-npm install -g npm
+rm -rf node_modules package-lock.json
+npm install
 ```
 
-* If port 5173 is busy, Vite will automatically use another port.
+* If dependencies are outdated or broken:
+
+```bash
+npm update
+```
 
 ---
 
-## Resources
-
-* Vite Docs: [https://vitejs.dev](https://vitejs.dev)
-* React Docs: [https://react.dev](https://react.dev)
-
----
-
-Happy coding 🚀
