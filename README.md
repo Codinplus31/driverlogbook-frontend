@@ -4,9 +4,11 @@ This guide explains how to install dependencies and run an existing **React + Vi
 
 ---
 
-## live demo 
+## Live Demo
 
-https://driverlogbook-frontend.vercel.app
+[https://driverlogbook-frontend.vercel.app](https://driverlogbook-frontend.vercel.app)
+
+---
 
 ## Prerequisites
 
@@ -61,7 +63,34 @@ This will install all required packages listed in `package.json`.
 
 ---
 
-## Step 3: Start the Development Server
+## Step 3: Environment Variables (Backend API URL)
+
+This project uses a Vite environment variable to connect to the Django backend API.
+
+
+### ✅ Deployed Backend (Live Version)
+
+Use this when you want the frontend to talk to the live, hosted Django backend:
+
+```env
+VITE_APP_BACKEND_URL=https://driverlogbook-backend.onrender.com
+```
+
+---
+
+### 🖥️ Local Backend (When Running Django Locally)
+
+Use this when you are running the Django project on your own machine:
+
+```env
+VITE_APP_BACKEND_URL=http://127.0.0.1:8000
+```
+
+> ⚠️ Make sure your Django server is running locally on port **8000** when using the local endpoint.
+
+---
+
+## Step 4: Start the Development Server
 
 ```bash
 npm run dev
@@ -89,7 +118,7 @@ http://localhost:5173
 
 ---
 
-## Step 4: Build for Production (Optional)
+## Step 5: Build for Production (Optional)
 
 To create an optimized production build:
 
@@ -101,7 +130,7 @@ The output will be generated in the `dist/` folder.
 
 ---
 
-## Step 5: Preview the Production Build (Optional)
+## Step 6: Preview the Production Build (Optional)
 
 ```bash
 npm run preview
@@ -138,3 +167,8 @@ npm update
 
 ---
 
+## Notes
+
+* Use the **deployed backend URL** for the live version of the app.
+* Use the **local backend URL** only when you are running the Django project locally.
+* After changing `.env`, always restart the Vite dev server.
