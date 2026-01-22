@@ -154,7 +154,7 @@ const App = () => {
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-3">
             <TruckIcon />
-            TruckLog Pro
+              Drivers Log Assessment
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Automated ELD Log Generator & Route Planner for Commercial Drivers
@@ -284,9 +284,7 @@ const App = () => {
                 <LogIcon />
                 Generated ELD Daily Logs
               </h2>
-              <button className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-md hover:bg-blue-200 transition-colors">
-                Export PDF
-              </button>
+              
             </div>
             
             {logs.map((dayLog, idx) => (
@@ -343,7 +341,6 @@ const App = () => {
             <li>Input your current cycle-used hours (from your ELD).</li>
             <li>Click “Generate Route & ELD Logs” to see the real route based on actual geocoded coordinates.</li>
             <li>The map will update only after clicking — showing precise locations from Django backend.</li>
-            <li>Print or save these logs for DOT compliance.</li>
           </ol>
           <div className="mt-4 flex items-center gap-2 text-sm text-gray-600 bg-white p-3 rounded-lg">
             <BackendIcon />
