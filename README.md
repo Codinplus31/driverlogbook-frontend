@@ -1,6 +1,6 @@
 # React + Vite Project Setup Guide
 
-This guide explains how to install dependencies and run an existing **React + Vite** project locally.
+This guide explains how to install dependencies and run the Driverlog **React + Vite** project locally.
 
 ---
 
@@ -68,7 +68,7 @@ This will install all required packages listed in `package.json`.
 This project uses a Vite environment variable to connect to the Django backend API.
 
 
-### ✅ Deployed Backend (Live Version)
+###  Deployed Backend (Live Version)
 
 Use this when you want the frontend to talk to the live, hosted Django backend:
 
@@ -78,7 +78,7 @@ VITE_APP_BACKEND_URL=https://driverlogbook-backend.onrender.com
 
 ---
 
-### 🖥️ Local Backend (When Running Django Locally)
+###  Local Backend (When Running Django Locally)
 
 Use this when you are running the Django project on your own machine:
 
@@ -86,7 +86,7 @@ Use this when you are running the Django project on your own machine:
 VITE_APP_BACKEND_URL=http://127.0.0.1:8000
 ```
 
-> ⚠️ Make sure your Django server is running locally on port **8000** when using the local endpoint.
+>  Make sure your Django server is running locally on port **8000** when using the local endpoint.
 
 ---
 
